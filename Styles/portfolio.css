@@ -1,0 +1,278 @@
+*{
+    margin: 0;    /*ওয়েব ব্রাউজার প্রতিটি এলিমেন্ট এর জন্য কিছু বাই ডিফল্ট মার্জিন ও প্যাডিং বরাদ্ধ রাখে। সেগুলো বাদ দেয়ার জন্য এইটা লেখা হয়েছে। */
+    padding: 0;   /*ওয়েব ব্রাউজার প্রতিটি এলিমেন্ট এর জন্য কিছু বাই ডিফল্ট মার্জিন ও প্যাডিং বরাদ্ধ রাখে। সেগুলো বাদ দেয়ার জন্য এইটা লেখা হয়েছে। */
+    box-sizing: border-box;   /*box model ব্যবহার হলেও অনেক সময় প্যাডিং দিলে সেটা বর্ডার এর বাইরে চলে আসে। এটা দিলে সেটা আর হবে না। যেমন: একটা ইলিমেন্ট সাইজ দেয়া আছে ১০০পিক্সেল এবং প্যাডিং দেয়া হল ২০ পিক্সেল তাহলে ১২০ পিক্সেল হয়ে গেল। এতে করে এলিমেন্ট ওভারসাইজ হয়ে যেতে পারে তাই এটা ব্যাবহার করা হয় যাতে প্যাডিং টা ভিতরের দিকে থাকে। */
+}
+
+/*Shared Style*/
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.btn{
+    background-color: #FD6E0A;
+    border:none;
+    padding:18px 35px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.section-heading{
+    max-width: 827px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-heading h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.section-heading p{
+    font-size: 18px;
+    margin-bottom:30px;
+    line-height: 30px;
+    color: #757575;
+}
+
+
+/*main Style*/
+
+.common_feature{
+    width:71%;
+    max-width: 1140px;
+    /*border:1px solid red;*/
+    margin: 0px auto;   /*margin 0 auto মানে উপর ও নিচ থেকে ০ এবং বাম ও ডান হতে অটো মানে বাম ও ডান থেকে মার্জিন ছাড়তে ছাড়তে যেখানে এসে দাড়ায়। দেখা গেল মাঝখানে এসে যাবে।*/
+}
+
+header{
+    background-color: #FFF8F3;
+    padding-top: 70px;
+    background:url("../images/developer.png"), url("../images/header_bg.png"), #FFF8F3;
+    background-position:center left, bottom right;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between; /*মাঝখানে সমান করে জায়গা ভাগ করে দেয়া এবং এলিমেন্ট গুলো একজন আরেকজন হতে সর্বোচ্চ দুরত্বে অবস্থান করা*/
+    align-items: center;  /*এটা মূলত দেয়া হয়েছে লোগো ও মেনু একই অ্যালাইনে থাকার জন্য। মূলত প্যারেন্ট ইলিমেন্টে দেয়া হয়। */
+}
+
+.logo h2{
+    font-size: 45px;
+    font-weight: 900px;
+}
+
+.color-orange{
+    color:#FD6E0A;
+}
+
+nav .menu{
+    display: flex;
+    list-style-type: none;
+    gap:51px;
+    align-items: center;
+}
+
+nav .menu a{
+    font-size: 20px;
+    color: #474747;
+    text-decoration: none;
+}
+
+#banner{
+    /*border:5px solid red;*/
+    margin-top: 47px;
+    margin-left: 230px;
+    margin-right: 38px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#banner .banner-content{
+    max-width: 585px;
+}
+
+#banner .banner-content h2{
+    font-size:45px;
+    font-weight: 600;
+    color:#888484;
+    margin-bottom: 5px;
+}
+
+#banner .banner-content h1{
+    font-size: 85px;
+    font-weight: bold;
+    color: #181818; 
+    margin-bottom:20px;
+}
+
+
+#banner .banner-content p{
+    font-size: 18px;
+    color: #757575;
+    line-height: 30px;
+}
+
+.btn_2{
+    margin-top: 20px;
+}
+
+#banner .banner-image img{
+    max-width: 584px;
+    vertical-align: middle;   /*যাতে কন্টেন্টটা নিচে বর্ডার কে স্পর্শ করে। কোন প্যাডিং না রাখে।*/
+}
+
+#about , #skills, #resume{
+    padding-top:130px; 
+}
+
+#about .about-container{
+    text-align: center;
+    background-color: #FFF8F3;
+    padding:131px 156px;
+}
+
+#about .about-container .about-info{
+    display: flex;
+    justify-content: space-around;  /*কন্টেন্টগুলো শুরু হওয়ার সময় বর্ডার থেকে একটু গ্যাপ দিয়ে শুরু হবে বাকিটা space-between এর মতো*/
+}
+
+
+.about-info .info-card p{
+    font-size: 20px;
+    line-height: 30px;
+    color:#757575;
+}
+
+.about-info .info-card h4{
+    font-size: 20px;
+}
+
+
+#skills .skills-container .skil-box{
+    display: flex;
+    gap: 24px;
+}
+
+.skil-box .skill-card{
+    padding:30px;
+    max-width: 267px;
+    box-shadow: 0 6px 50px #5a4646af;
+}
+
+.skill-card img{
+    max-width: 44px;
+    margin-bottom:30px;
+}
+
+.skill-card h3{
+    font-size:20px;
+    color:#181818;
+    margin-bottom: 20px;
+}
+
+.skill-card p{
+    font-size: 16px;
+    line-height: 28px;
+    color:#757575;
+}
+
+#resume .resume-container{
+    max-width: 1140px;
+    display: flex;
+    gap:24px;
+}
+
+.resume-container .section-title{
+    color:#474747;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.resume-container .resume-card{
+    max-width:511px;
+    margin-right:100px;
+}
+
+.resume-card .card-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:#474747;
+}
+
+.resume-card .card-info{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color:#757575;
+}
+
+.resume-card .card-test{
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+    color: #757575;;
+}
+
+.resume-container hr{
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+
+footer{
+    margin-top: 100px;
+    background-color: #FFF8F3;
+    padding: 130px;
+}
+
+footer .footer-container{ 
+    display: flex;
+    gap:116px;
+}
+
+.footer-container h2{
+    font-size: 35px;
+    font-weight: bold;
+    color:#181818;
+    margin-bottom: 20px;
+}
+
+.footer-container .social{
+    max-width: 562px;
+}
+
+.footer-container .social p{
+    color:#474747;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-container .icons a{
+    margin-right:24px;
+    margin-left: 0px;
+}
+
+.footer-container form input[type=text], .footer-container form textarea{
+    width:461px;
+    padding: 18px 31px;
+    margin-bottom: 24px;
+    border:none;
+    border-radius: 5px;
+    color:#757575;
+}
+
+
